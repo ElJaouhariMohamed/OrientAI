@@ -9,7 +9,7 @@ The project's focus on interacting with students online, asking them questions a
 ![Alt txt](https://github.com/ElJaouhariMohamed/OrientAI/blob/main/static/img/assets/ima-logo-dark.png)
 
 > [!NOTE]
-> For anyone interested in the project, the following Report contains details of our UML : [Click Here](https://github.com/ElJaouhariMohamed/OrientAI/blob/main/Rapport_OrientAI.pdf)
+> For anyone interested in the project, the following Report contains details of our IMA Project : [Click Here](https://github.com/ElJaouhariMohamed/OrientAI/blob/main/Rapport_OrientAI.pdf)
 
 ## 3) Collaborators :
 
