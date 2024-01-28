@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>OrientAi : Questions Form </title>
+    {% include 'head.html' %}
+    
+</head>
+
+<body data-fade-in="true">
+
+    <div class="pre-loader">
+        <div></div>
+    </div>
+
+    {% include 'header.html' %}
+    <script>
+        window.addEventListener('load', function() {
+          var targetSection = document.getElementById('form');
+          if (targetSection) {
+            targetSection.scrollIntoView();
+          }
+        });
+      </script>
+
+    <!-- Hero -->
+    <section id="hero" class="hero-fullscreen parallax" data-overlay-dark="7">
+        <div class="background-image">
+            <img src="/static/img/backgrounds/bg-1.jpg" alt="#">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">Skills Form : Want to know which major suits you more ? Fill the following form !</h1>
+                
+            </div>
+            
+        </div>
+    </section>
+    <!-- End Hero -->
+    <section id="form">
+        <div class="container pt100 pb90">
+            <div class="row">
+                <div class="col-12-lg">
+                    {% include 'formulaire.html' %}
+                </div>
+        </div>
+        </div>
+    </section>
+
+    {% include 'leftovers.html' %}
+
+</body>
+
+</html>

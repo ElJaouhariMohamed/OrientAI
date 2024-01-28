@@ -1,0 +1,177 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    {% include 'head.html' %}
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    
+   
+
+    <title> OrientAi : Grades Form </title>
+  </head>
+  <body data-fade-in="true">
+
+    <div class="pre-loader">
+        <div></div>
+    </div>
+    {% include 'header.html' %}
+
+    <script>
+      window.addEventListener('load', function() {
+        var targetSection = document.getElementById('here');
+        if (targetSection) {
+          targetSection.scrollIntoView();
+        }
+      });
+    </script>
+
+    <section id="hero" class="hero-fullscreen parallax" data-overlay-dark="7">
+        <div class="background-image">
+            <img src="{% static 'img/backgrounds/bg-1.jpg' %}"alt="#">
+        </div>
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">Grades Form : Want to know your general average in each major ? </h1>
+                
+            </div>
+            
+        </div>
+      </section>
+    <div class="container">
+        <div class="col-md-12" id="here"><br>
+          <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">Enter your grades</h4></legend>
+          <div class="form h-100 contact-wrap p-5">
+            <form class="mb-9" method="post" id="contactForm" action="/algo/" name="contactForm">
+              <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Analyse 1 </label>
+                  <input required type="number" class="form-control" name="Analyse 1" >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Algebre 1</label>
+                  <input required type="number" class="form-control"  name="Algebre 1"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Mecanique 1</label>
+                  <input required type="number" class="form-control"  name="Mecanique 1" >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Physique 1</label>
+                  <input required type="number" class="form-control"  name="Physique 1"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> LC 1</label>
+                  <input required type="number" class="form-control"  name="LC 1" >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">Informatique 1</label>
+                  <input required type="number" class="form-control"  name="Informatique 1"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Physique 2</label>
+                  <input required type="number" class="form-control"  name="Physique 2" >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Algebre 2</label>
+                  <input required type="number" class="form-control"  name="Algebre 2"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Analyse 2</label>
+                  <input required type="number" class="form-control"  name="Analyse 2" >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Chimie</label>
+                  <input required type="number" class="form-control"  name="Chimie"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Informatique 2</label>
+                  <input required type="number" class="form-control"  name="Informatique 2" >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> LC 2</label>
+                  <input required type="number" class="form-control"  name="LC 2"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Algebre 3 </label>
+                  <input required type="number" class="form-control"  name="Algebre 3" >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Analyse 3 </label>
+                  <input required type="number" class="form-control"  name="Analyse 3" >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Mecanique 2</label>
+                  <input required type="number" class="form-control"  name="Mecanique 2"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Electronique 1 </label>
+                  <input required type="number" class="form-control"  name="Electronique 1"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Informatique 3</label>
+                  <input required type="number" class="form-control"  name="Informatique 3"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">  LC 3</label>
+                  <input required type="number" class="form-control"  name="LC 3"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">  Analyse 4 </label>
+                  <input required type="number" class="form-control"  name="Analyse 4"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">  Math Appliquees </label>
+                  <input required type="number" class="form-control"  name="Math Appliquees"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">  Physique 4 </label>
+                  <input required type="number" class="form-control"  name="Physique 4"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">  Physique 3 </label>
+                  <input required type="number" class="form-control"  name="Physique 3"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> Electronique 2</label>
+                  <input required type="number" class="form-control"  name="Electronique 2"  >
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label"> LM </label>
+                  <input required type="number" class="form-control"  name="LM"  >
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 form-group text-center">
+                  <input required type="submit" value="Send "  class="btn btn-block btn-primary rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+            </form>
+            <div id="form-message-warning mt-4"></div> 
+          </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+    {% include 'leftovers.html' %}
+
+   
+    
+  </body>
+</html>

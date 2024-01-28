@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prédiction de la fillière convenable </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+    }
+
+    #result p {
+      margin-bottom: 5px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#calculate-btn').click(function() {
+        var notes = [];
+        $('.note-input').each(function() {
+          notes.push(parseFloat($(this).val()));
+        });
+
+        $.ajax({
+          type: 'POST',
+          url: 'http://localhost:8000/predict_api/',
+          data: { 'notes[]': notes },
+          success: function(data) {
+            $('#result').empty();
+            for (var filiere in data) {
+              $('#result').append('<p>Moyenne pour la filière ' + filiere + ': ' + data[filiere].toFixed(2) + '</p>');
+            }
+          },
+          error: function(xhr, status, error) {
+            $('#result').empty();
+            $('#result').append('<p>Erreur: ' + xhr.responseText + '</p>');
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Calcul des moyennes pondérées</h1>
+  <form>
+    <label for="analy1">Analyse 1:</label>
+    <input type="number" class="note-input" id="analy1" step="0.01" required>
+
+    <label for="algebre1">Algèbre 1:</label>
+    <input type="number" class="note-input" id="algebre1" step="0.01" required>
+
+    <label for="analy2">Analyse 2:</label>
+    <input type="number" class="note-input" id="analy2" step="0.01" required>
+
+    <label for="algebre2">Algèbre 2:</label>
+    <input type="number" class="note-input" id="algebre2" step="0.01" required>
+
+    <label for="mecanique">Mécanique:</label>
+    <input type="number" class="note-input" id="mecanique" step="0.01" required>
+
+    <button type="button" id="calculate-btn">Calculer</button>
+  </form>
+
+  <div id="result"></div>
+</body>
+</html>

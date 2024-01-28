@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OrientAi</title>
+    {% include 'head.html' %}
+    <link href="{% static 'css/cssAcceuil.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body data-fade-in="true">
+
+    <div class="pre-loader">
+        <div></div>
+    </div>
+
+    {% include 'header.html' %}
+
+    <!-- Hero -->
+    <section id="hero" class="hero-fullscreen parallax" data-overlay-dark="7">
+        <div class="background-image">
+            <img src="/static/img/backgrounds/bg-1.jpg" alt="#">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">OrientAI : Find the major that suits you </h1>
+            </div>
+            
+        </div>
+    </section>
+    <!-- End Hero -->
+    <section id="form">
+        <div class="container pt100 pb90">
+            <div class="row">
+                <div class="col-12-lg">
+                    {% include 'acceuil.html' %}
+                </div>
+        </div>
+        </div>
+    </section>
+
+    {% include 'leftovers.html' %}
+
+</body>
+
+</html>

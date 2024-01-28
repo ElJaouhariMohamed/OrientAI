@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>OrientAi: Form Results  </title>
+    {% include 'head.html' %}
+</head>
+
+<body data-fade-in="true">
+
+    <div class="pre-loader">
+        <div></div>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+          var targetSection = document.getElementById('results');
+          if (targetSection) {
+            targetSection.scrollIntoView();
+          }
+        });
+      </script>
+
+    {% include 'header.html' %}
+
+    <!-- Hero -->
+    <section id="hero" class="hero-fullscreen parallax" data-overlay-dark="7">
+        <div class="background-image">
+            <img src="/static/img/backgrounds/bg-1.jpg" alt="#">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">Skills Form : Want to know which major suits you more ? </h1>
+                
+            </div>
+            
+        </div>
+    </section>
+    <!-- End Hero -->
+    <section id="results">
+        <div class="container pt100 pb90">
+            <div class="row">
+                <div class="col-12-lg">
+                    <div class="col-md-6 pt40 pb30">
+                        <div class="progress-bars standard transparent-bars" data-animate-on-scroll="on">
+                            <h5 class="bold text-center">Informatique et Ingenierie des Donnees (IID)</h5>
+                            <div class="progress" data-percent="{{IID}}%">
+                                <div class="progress-bar">
+                                    <span class="progress-bar-tooltip">{{IID}}%</span>
+                                </div>
+                            </div>
+
+                            <h5 class="bold text-center">Genie Informatique (GI)</h5>
+                            <div class="progress" data-percent="{{GI}}%">
+                                <div class="progress-bar">
+                                    <span class="progress-bar-tooltip">{{GI}}%</span>
+                                </div>
+                            </div>
+
+                            <h5 class="bold text-center">Genie Electrique (GE)</h5>
+                            <div class="progress" data-percent="{{GE}}%">
+                                <div class="progress-bar">
+                                    <span class="progress-bar-tooltip">{{GE}}%</span>
+                                </div>
+                            </div>
+
+                            <h5 class="bold text-center">Genie des Procedes et des Energies Renouvelables (GPEE)</h5>
+                            <div class="progress" data-percent="{{GPEE}}%">
+                                <div class="progress-bar">
+                                    <span class="progress-bar-tooltip">{{GPEE}}%</span>
+                                </div>
+                            </div>
+
+                            <h5 class="bold text-center">Ingenierie des Reseaux Intelligent et Cybersecurite (IRIC)</h5>
+                            <div class="progress" data-percent="{{IRIC}}%">
+                                <div class="progress-bar">
+                                    <span class="progress-bar-tooltip">{{IRIC}}%</span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <h2 >Probably, the best major for you is :<br><span class="color">{{maxmajorName}}</span></h2>
+                        <h5>{{text}}</h5>
+                        <br>
+                        <img src="/static/img/assets/{{maxmajor}}.jpg">
+                    </div>
+                </div>
+        </div>
+        </div>
+    </section>
+
+    {% include 'leftovers.html' %}
+
+</body>
+
+</html>

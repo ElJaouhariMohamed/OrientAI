@@ -1,0 +1,35 @@
+{% load static %}
+<!-- Start Header -->
+<nav class="navbar nav-down" data-fullwidth="true" data-menu-style="transparent" data-animation="shrink">
+    <!-- Styles: light, dark, transparent, transparent-to-dark | Animation: hiding, shrink -->
+    <div class="container">
+
+        <div class="navbar-header">
+            <div class="container">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                    </button>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a class="navbar-brand to-top" href="/">
+                            <img src="{% static 'img/assets/logo-light.png' %}" class="logo-light" alt="/"><img src="/static/img/assets/logo-dark.png" class="logo-dark" alt="#">
+                        </a>   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="container">
+                <ul class="nav navbar-nav menu-right">
+                    <li><a href="/qstsapi"><i class="fa fa-chevron-right size-3x color" aria-hidden="true"></i>&emsp;Skills Form</a></li>
+                    <li><a href="/gradesapi"><i class="fa-sharp fa-solid fa-compass size-3x color"></i>&emsp;Grades Form</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- End Header -->

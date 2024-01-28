@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OrientAi:  Results  </title>
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    {% include 'head.html' %}
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body data-fade-in="true">
+
+    <div class="pre-loader">
+        <div></div>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+          var targetSection = document.getElementById('resultss');
+          if (targetSection) {
+            targetSection.scrollIntoView();
+          }
+        });
+      </script>
+
+    {% include 'header.html' %}
+
+    <!-- Hero -->
+    <section id="hero" class="hero-fullscreen parallax" data-overlay-dark="7">
+        <div class="background-image">
+            <img src="/static/img/backgrounds/bg-1.jpg" alt="#">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">Grades Form : Want to know your general averages in each major ? </h1>
+                
+            </div>
+            
+        </div>
+    </section>
+    <!-- End Hero -->
+    <h4 class="text-center" style="color:black;font-weight:bold;font-size:2.5em">Results :</h4>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <section id="resultss">
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead class="thead-primary">
+                            <tr>
+                                <th>Informatique et Ingenierie des Donnees (IID)</th><td class="note">{{IID}}</td>
+                            </tr><tr>
+                                <th>Genie Informatique (GI)</th><td class="note">{{GI}}</td>
+                            </tr><tr>
+                                <th>Genie Electrique (GE)</th><td class="note">{{GE}}</td>
+                            </tr><tr>
+                                <th>Ingenierie des Reseaux Intelligent et Cybersecurite (IRIC)</th><td class="note">{{IRIC}}</td>
+                            </tr><tr>
+                                <th>Genie des Procedes et des Energies Renouvelables (GPEE)</th><td class="note">{{GPEE}}</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h2 >Probably, the best major for you is :<br><span class="color">{{maxMajName}}</span></h2>
+            <h5>{{text}}</h5>
+            <br>
+            <img src="/static/img/assets/{{maxMaj}}.jpg">
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    {% include 'leftovers.html' %}
+
+</body>
+
+</html>

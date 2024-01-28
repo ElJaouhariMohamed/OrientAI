@@ -1,0 +1,532 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+    .row{
+        margin-bottom:10px;
+    }
+    label{
+        display:inline;
+    }
+</style>
+<div  class="form h-100 contact-wrap p-2" style="background-color:rgba(255,255,255,0.4);font-size:1.25em;padding:20px;color:black; padding:80px;">
+        <form action="/model/" method="post" name="contactForm">
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">Personal Information</h4></legend>
+                    <div class="form-group mb-3">
+                        <p>Filling these fields is fully optional
+                    </div>
+                    <div class="form-group mb-12 row">
+                        <div class="col-md-3">
+                            <label class="form-label" for="FName">
+                                First Name 
+                            </label>
+                        </div><div class="col-md-8">
+                            <input  class="form-text-input " type="text" name="FName" id="FName">
+                        </div>
+                    </div>
+                    <div class="form-group mb-12 row">
+                        <div class="col-md-3">
+                        <label class="form-label" for="LName">
+                            Last Name 
+                        </label>
+                        </div><div class="col-md-8">
+                        <input  class="form-text-input " type="text" name="LName" id="LName">
+                    </div>
+                    </div>
+                    <div class="form-group mb-12 row">
+                        <div class="col-md-3">
+                        <label class="form-label" for="Email">
+                            Email 
+                        </label>
+                        </div><div class="col-md-8">
+                        <input  class="form-text-input " type="email" name="Email" id="Email">
+                    </div>
+                    </div>
+                    <div class="form-group mb-12 row">
+                        <div class="col-md-8">
+                        <label class="form-label" for="Major">
+                            Major (if you are already post preparatory classes/ the major you which to join) 
+                        </label>
+                        </div><div class="col-md-3">
+                        <select class="form-check-input " style="width:100%;" type="text" name="Major" id="Major">
+                            <option value=""></option>
+                            <option value="IID">IID</option>
+                            <option value="GI">GI</option>
+                            <option value="GE">GE</option>
+                            <option value="IRIC">IRIC</option>
+                            <option value="GPEE">GPEE</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="form-label" for="nothing">
+                            If you are filling this form to populate the data, please answer with respect to skills and knowledge you had when you were at API2.
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">1. What is your interest in technology?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input" type="radio" required name="Q1"   id="Q11" value="I love it" >
+                        <label class="form-label" for="Q11">a. I love it</label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q1" id="Q12" value="I am not sure" >
+                        <label class="form-check-label" for="Q12">
+                            b. I am not sure
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q1" id="Q13" value="I don't like it" >
+                        <label class="form-check-label" for="Q13">
+                            c. I don't like it
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">2. Do you enjoy programming?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q2" id="Q21" value="Yes" >
+                        <label class="form-label" for="Q21">
+                            a. Yes
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q2" id="Q22" value="No" >
+                        <label class="form-check-label" for="Q22">
+                            b. No
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q2" id="Q23" value="I haven't tried it yet" >
+                        <label class="form-check-label" for="Q23">
+                            c. I haven't tried it yet
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">3. Are you comfortable working with numbers?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q3" id="Q31" value="Yes" >
+                        <label class="form-label" for="Q31">
+                            a. Yes
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q3" id="Q32" value="No" >
+                        <label class="form-check-label" for="Q32">
+                            b. No
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q3" id="Q33" value="I am not sure" >
+                        <label class="form-check-label" for="Q33">
+                            c. I am not sure
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">4. What is your experience with computer systems?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q4" id="Q41" value="I am very familiar with them" >
+                        <label class="form-label" for="Q41">
+                            a. I am very familiar with them
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q4" id="Q42" value="I know the basics" >
+                        <label class="form-check-label" for="Q42">
+                            b. I know the basics
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q4" id="Q43" value="I have little to no experience" >
+                        <label class="form-check-label" for="Q43">
+                            c. I have little to no experience
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">5. Are you interested in learning about artificial intelligence?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q5" id="Q51" value="Yes" >
+                        <label class="form-label" for="Q51">
+                            a. Yes
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q5" id="Q52" value="No" >
+                        <label class="form-check-label" for="Q52">
+                            b. No
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q5" id="Q53" value="I am not sure" >
+                        <label class="form-check-label" for="Q53">
+                            c. I am not sure
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">6. What is your experience with databases?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q6" id="Q61" value="I am very familiar with them" >
+                        <label class="form-label" for="Q61">
+                            a. I am very familiar with them
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q6" id="Q62" value="I know the basics" >
+                        <label class="form-check-label" for="Q62">
+                            b. I know the basics
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q6" id="Q63" value="I have little to no experience" >
+                        <label class="form-check-label" for="Q63">
+                            c. I have little to no experience
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">7. Are you willing to spend long hours working on a project that involves conceptualising or developping code?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q7" id="Q71" value="Yes" >
+                        <label class="form-label" for="Q71">
+                            a. Yes
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q7" id="Q72" value="No" >
+                        <label class="form-check-label" for="Q72">
+                            b. No
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q7" id="Q73" value="I am not sure" >
+                        <label class="form-check-label" for="Q73">
+                            c. I am not sure
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">8. What is your experience with computer networks?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q8" id="Q81" value="I am very familiar with them" >
+                        <label class="form-label" for="Q81">
+                            a. I am very familiar with them
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q8" id="Q82" value="I know the basics" >
+                        <label class="form-check-label" for="Q82">
+                            b. I know the basics
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q8" id="Q83" value="I have little to no experience" >
+                        <label class="form-check-label" for="Q83">
+                            c. I have little to no experience
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">9. Do you enjoy solving complex problems?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q9" id="Q91" value="Yes" >
+                        <label class="form-label" for="Q91">
+                            a. Yes
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q9" id="Q92" value="No" >
+                        <label class="form-check-label" for="Q92">
+                            b. No
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q9" id="Q93" value="I am not sure" >
+                        <label class="form-check-label" for="Q93">
+                            c. It depends on the problem
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">10. What is your experience with programming languages?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q10" id="Q101" value="I am very familiar with them" >
+                        <label class="form-label" for="Q101">
+                            a. I am very familiar with them
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q10" id="Q102" value="I know the basics" >
+                        <label class="form-check-label" for="Q102">
+                            b. I know the basics
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q10" id="Q103" value="I have little to no experience" >
+                        <label class="form-check-label" for="Q103">
+                            c. I have little to no experience
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">11. Are you interested in developing software applications?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q11" id="Q111" value="Yes" >
+                        <label class="form-label" for="Q111">
+                            a. Yes
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q11" id="Q112" value="No" >
+                        <label class="form-check-label" for="Q112">
+                            b. No
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q11" id="Q113" value="I am not sure" >
+                        <label class="form-check-label" for="Q113">
+                            c. I am not sure
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">12. What is your experience with data analysis?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q12" id="Q121" value="I am very familiar with them" >
+                        <label class="form-label" for="Q121">
+                            a. I am very familiar with it
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q12" id="Q122" value="I know the basics" >
+                        <label class="form-check-label" for="Q122">
+                            b. I know the basics
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q12" id="Q123" value="I have little to no experience" >
+                        <label class="form-check-label" for="Q123">
+                            c. I have little to no experience
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">13. Are you comfortable working with large amounts of data?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q13" id="Q131" value="Yes" >
+                        <label class="form-label" for="Q131">
+                            a. Yes
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q13" id="Q132" value="No" >
+                        <label class="form-check-label" for="Q132">
+                            b. No
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q13" id="Q133" value="I am not sure" >
+                        <label class="form-check-label" for="Q133">
+                            c. I am not sure
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">14. What is your experience with statistics?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q14" id="Q141" value="I am very familiar with them" >
+                        <label class="form-label" for="Q141">
+                            a. I am very familiar with it
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q14" id="Q142" value="I know the basics" >
+                        <label class="form-check-label" for="Q142">
+                            b. I know the basics
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q14" id="Q143" value="I have little to no experience" >
+                        <label class="form-check-label" for="Q143">
+                            c. I have little to no experience
+                        </label>
+                    </div>
+                    </fieldset>
+                </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">15. Are you interested in machine learning?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q15" id="Q151" value="Yes" >
+                        <label class="form-label" for="Q151">
+                            a. Yes
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q15" id="Q152" value="No" >
+                        <label class="form-check-label" for="Q152">
+                            b. No
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q15" id="Q153" value="I am not sure" >
+                        <label class="form-check-label" for="Q153">
+                            c. I am not sure
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">16. What is your experience with software development methodologies?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q16" id="Q161" value="I am very familiar with them" >
+                        <label class="form-label" for="Q161">
+                            a. I am very familiar with them
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q16" id="Q162" value="I know the basics" >
+                        <label class="form-check-label" for="Q162">
+                            b. I know the basics
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q16" id="Q163" value="I have little to no experience" >
+                        <label class="form-check-label" for="Q162">
+                            c. I have little to no experience
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">17. Are you interested in data visualization?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q17" id="Q171" value="Yes" >
+                        <label class="form-label" for="Q171">
+                            a. Yes
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q17" id="Q172" value="No" >
+                        <label class="form-check-label" for="Q172">
+                            b. No
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q17" id="Q173" value="I am not sure" >
+                        <label class="form-check-label" for="Q173">
+                            c. I am not sure
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">18. What is your experience with web development?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q18" id="Q181" value="I am very familiar with them" >
+                        <label class="form-label" for="Q181">
+                            a. I am very familiar with it
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q18" id="Q182" value="I know the basics" >
+                        <label class="form-check-label" for="Q182">
+                            b. I know the basics
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q18" id="Q183" value="I have little to no experience" >
+                        <label class="form-check-label" for="Q183">
+                            c. I have little to no experience
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">19. Are you interested in pursuing a career in the tech industry?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q19" id="Q191" value="Yes" >
+                        <label class="form-label" for="Q191">
+                            a. Yes
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q19" id="Q192" value="No" >
+                        <label class="form-check-label" for="Q192">
+                            b. No
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q19" id="Q193" value="I am not sure" >
+                        <label class="form-check-label" for="Q193">
+                            c. I am not sure
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend><h4 class="text-center" style="color:black;font-weight:bold;font-size:1.5em">20. What is your experience with project management?</h4></legend>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q20" id="Q201" value="I am very familiar with them" >
+                        <label class="form-label" for="Q201">
+                            a. I am very familiar with it
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q20" id="Q202" value="I know the basics" >
+                        <label class="form-check-label" for="Q202">
+                            b. I know the basics
+                        </label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input  class="form-check-input " type="radio" required name="Q20" id="Q203" value="I have little to no experience" >
+                        <label class="form-check-label" for="Q203">
+                            c. I have little to no experience
+                        </label>
+                    </div>
+                    </fieldset>
+            </div>
+            <div class = "row">
+            <button class="btn btn-success" style="width:100%;font-size:1.50em" type="submit" >Find Out</button>
+            </div>
+        </form>
+</div>

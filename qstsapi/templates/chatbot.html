@@ -1,0 +1,113 @@
+{% load static %}
+<script src="{% static 'js/jquery.js' %}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="{% static 'css/css/common-page.css' %}">
+<link rel="stylesheet" href="{% static 'css/toastr.css' %}">
+<script src="{% static 'script/toastr.js' %}"></script>
+    <section>
+        <div class="container">
+            <div id="wmsg">Hello, I am IMA !</div>
+            <div class="chat-icon" id="chtbt-btn" onClick="openChat()">
+                <img src="{% static 'img/assets/ima-logo-min-dark.png' %}" />
+              </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row" id = 'cnt'>
+                        <div class="row" id = 'containe'>
+                        <div class="row">
+                        <div class="col-sm-10">
+                            <h3><img src="{% static 'img/assets/ima-logo-dark.png' %}" style="width:100px;height:auto;" /></h3>
+                        </div><div class="col-sm-2"><a onClick="$('#cnt').hide();" class="btn btn-danger cus-btn-normal" style="width:3em;height:auto;">X</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row" id="MessageContent">
+                                    <div class="row">
+                                    <div class='col-sm-2'><img src="{% static 'img/assets/ima-logo-min-dark.png' %}" /></div>
+                                    <div class='col-sm-6 guest-message'><p style='color: #000;'>Hello, This is IMA ! I am here to answer your questions.</p><p class='time'></p></div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <hr>
+                                <form id="chatForm" action="/myAPI/" method="POST">
+                                        <div class="col-sm-10">
+                                            <textarea class="form-control" style="width: 100%;margin:0px;resize:none;" rows="1" placeholder="Enter your message here" name="msg" id="msg"></textarea>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <button type="submit" class="cus-btn-normal" id="Reply" ><i class="fa fa-paper-plane" aria-hidden="true" style="color: #ffffff;"></i></button>
+                                        </div>
+                                </form> 
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var message = document.getElementById('wmsg');
+            message.style.display = 'block';
+          
+            setTimeout(function() {
+              message.style.display = 'none';
+              setTimeout(function(){
+                message.innerText="Let's chat !";
+                message.style.display = 'block';
+                setTimeout(function(){
+                    message.style.display = 'none';
+                },5000);
+              },5000);
+            }, 5000);
+          });
+        function openChat(){
+            $('#cnt').toggle();
+        }
+        // Prevent the default form submission behavior
+        document.getElementById('chatForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get the form data
+            var formData = new FormData(event.target);
+
+            // Send the form data asynchronously using AJAX
+            fetch(event.target.action, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(function(response) {
+                    return response.json(); // Parse the JSON response
+                })
+                .then(function(res) {
+                    drawMessage(res); // Handle the response
+                })
+                .catch(function(error) {
+                    toastr.error("Something went wrong"); // Display an error message
+                });
+        });
+
+        //function to automatically scrolldown:
+        function scrollDown(){
+            var elem = document.getElementById('MessageContent');
+            elem.scrollTop = elem.scrollHeight;
+          }
+        // Function to handle the response and update the message content
+        function drawMessage(res) {
+            var msgContent = document.getElementById('MessageContent');
+            var message = "<div class=\"row\"><div class='col-sm-6 owner-message'><p style='color: #ffffff;'>" + res.ques + "</p><p class='time'>" + res.time + "</p></div></div>";
+            message += "<div class=\"row\"><div class='col-sm-2'><img src=\"{% static 'img/assets/ima-logo-min-dark.png' %}\" /></div><div class='col-sm-6 guest-message'><p style='color: #000;'>" + res.res + "</p><p class='time2'>" + res.time + "</p></div></div>";
+
+            msgContent.innerHTML += message;
+            scrollDown();
+            // Clear the text area
+            var msgText = document.getElementById('msg');
+            msgText.value = '';
+        }
+
+        
+    </script>

@@ -1,0 +1,38 @@
+{% load static %}
+<section id="about" class="pt100 pb90">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center pb20">
+                <h2><strong>OrientAI Project</strong></h2>
+                <p class='Lead'>Students data to help students future!</p>
+            </div>
+            <div class="col-sm-6 feature-left">
+                <img src="{% static 'img/assets/ima-logo-dark.png' %}" style="width:100px;height:auto;" class="color" />
+                <div class="feature-left-content">
+                    <h4><strong>ChatBot</strong></h4>
+                    <p>IMA: is a computer program that uses artificial intelligence and NLP (Natural Language Processing).</p>
+                    <p>Its goal is to assist students in discovering their educational orientation choices.</p>
+                    <p>The IMA ChatBot is designed to interact with students online, asking them questions about their interests, skills, and goals, and providing them with information about careers or study programs that may suit them.</p>
+                    <p>It also allows students to ask questions about the National School of Applied Sciences in Khouribga.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 feature-left">
+                <i class="fa fa-chevron-right size-3x color" aria-hidden="true"></i>
+                <div class="feature-left-content">
+                    <h4><strong><a href="/qstsapi">Skills Form</a></strong></h4>
+                    <p>This form suggests the suitable field of study for the student based on their skills, 
+                    by answering a set of questions related to the skills associated with the IID field.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 feature-left">
+                <i class="fa-sharp fa-solid fa-compass size-3x color"></i>
+                <div class="feature-left-content">
+                    <h4><a href="/gradesapi"><strong>Grades Form</strong></a></h4>
+                    <p>
+                        This form once again suggests the suitable major to the student, but this time based on their grades. The student needs to enter the grade for each module of the 4 semesters, and the program will rank the majors according to their calculated averages.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
